@@ -5,8 +5,8 @@
 __author__ = "Alexandre Boni"
 __copyright__ = "Copyleft 2014, Alexandre Boni"
 __credits__ = ["Alexandre Boni"]
-__license__ = "CC BY"
-__version__ = "4.0"
+__license__ = "CC BY 4.0"
+__version__ = "1.0"
 __maintainer__ = "Alexandre Boni"
 __email__ = ""
 __status__ = "Production"
@@ -19,13 +19,13 @@ helpString = "\
 ####################\n\
 \n\
     -p --pci keyword1,keyword2,\n\
-        Extract pci device which containes keyword1 or keyword2\n\
+        Extract pci device which contains keyword1 or keyword2\n\
         and print pci header.\n\
     -l --line keyword1,keyword2,\n\
-        Extract pci device which containes keyword1 or keyword2\n\
+        Extract pci device which contains keyword1 or keyword2\n\
         and print pci header + line with keyword.\n\
     -w --word keyword1,keyword2,\n\
-        Extract pci device which containes keyword1 or keyword2\n\
+        Extract pci device which contains keyword1 or keyword2\n\
         and print pci header + keyword and the next word/value.\n\
     -M --mute-pci\n\
         Mute pci header print\n\
@@ -62,14 +62,14 @@ helpString = "\
                     AFStatus: TP-\n\
 \n\
     02:03.0 USB controller: VMware USB2 EHCI Controller (prog-if 20 [EHCI])\n\
-	Subsystem: VMware USB2 EHCI Controller\n\
-	Physical Slot: 35\n\
-	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-\n\
-	Status: Cap- 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-\n\
-	Latency: 64 (1500ns min, 63750ns max)\n\
-	Interrupt: pin A routed to IRQ 17\n\
-	Region 0: Memory at fd5ff000 (32-bit, non-prefetchable) [size=4K]\n\
-	Kernel driver in use: ehci-pci\n\
+            Subsystem: VMware USB2 EHCI Controller\n\
+            Physical Slot: 35\n\
+            Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-\n\
+            Status: Cap- 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-\n\
+            Latency: 64 (1500ns min, 63750ns max)\n\
+            Interrupt: pin A routed to IRQ 17\n\
+            Region 0: Memory at fd5ff000 (32-bit, non-prefetchable) [size=4K]\n\
+            Kernel driver in use: ehci-pci\n\
 \n\
 \n\
   ####################\n\
