@@ -58,35 +58,50 @@ Tested with Python2.7 and Python3.4.
 
 ## Standard use
 By default, the script calls the <i>lspci</i> command of the system.
+* Print devices with "USB" in the title
 ```
     $> ./pci-extractor.py -p USB
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
     02:03.0 | USB controller | VMware USB2 EHCI Controller
-
+```
+* Print every device and the description with "DSel" if exists
+```
     $> ./pci-extractor.py -l DSel
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
         Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
     02:03.0 | USB controller | VMware USB2 EHCI Controller
-
+```
+* Print device with "Intel" in the title and "DSel" in the description
+```
     $> ./pci-extractor.py -l DSel -p Intel
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
         Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
-
+```
+* Print device with "Intel" in the title and "DSel" in the description, but mute description
+```
     $> ./pci-extractor.py -l DSel -p Intel -m
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
-
+```
+* Print every device and the word+value of "DSel" if exists
+```
     $> ./pci-extractor.py -w DSel
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
         DSel 0
     02:03.0 | USB controller | VMware USB2 EHCI Controller
-
+```
+* Print device with "Intel" in the title and the word+value of "DSel" if exists
+```
     $> ./pci-extractor.py -w DSel -p Intel
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
         DSel 0
-
+```
+* Print device with "Intel" in the title and the word+value of "DSel" if exists, but mute the title
+```
     $> ./pci-extractor.py -w DSel -p Intel -M
         DSel 0
-
+```
+* Print device with "Intel" in the title and the value of "DSel", but mute the title
+```
     $> ./pci-extractor.py -w DSel -p Intel -M -r
     0
 ```
@@ -98,3 +113,8 @@ If you have a dump of the <i>lspci</i> command with verbose, you can use the scr
     00:1d.0 | USB Controller | Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller
     02:03.0 | USB controller | VMware USB2 EHCI Controller
 ```
+
+# Info
+* Author: Alexandre Boni
+* Version: 1.0
+* License: CC BY 4.0
