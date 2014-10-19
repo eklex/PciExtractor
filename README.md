@@ -114,7 +114,7 @@ If you have a dump of the <i>lspci</i> command with verbose, you can use the scr
     02:03.0 | USB controller | VMware USB2 EHCI Controller
 ```
 
-# Info
+# Credits
 * Author: Alexandre Boni
 * Version: 1.0
 * License: CC BY 4.0
